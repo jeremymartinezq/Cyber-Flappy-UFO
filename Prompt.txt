@@ -1,0 +1,153 @@
+CopyCoder Prompt for Cursor:
+
+Build a futuristic, cyberpunk-themed Flappy Bird clone using HTML5 Canvas, TailwindCSS, and vanilla JavaScript. The game should feel interactive, explosive, and badass — like you're piloting a cybernetic drone dodging neon obstacles in a dystopian skyline.
+
+🎮 Game Requirements:
+
+The player controls a cybernetic bird drone that "flaps" to fly.
+
+Use the spacebar or mouse click to flap upward.
+
+Implement gravity and physics-based falling motion.
+
+Generate moving obstacles (neon-colored pipes or pillars) with random gaps.
+
+Add explosive effects when the player crashes (use animated sprites or particle effects).
+
+Include a score system that increases for each set of pipes passed.
+
+Display a game over screen with a “Try Again” button.
+
+Use sound effects: flap, explosion, and score blip.
+
+Create a visually badass cyberpunk theme: neon lights, glitch effects, and synthwave colors.
+
+🖼️ Design:
+
+Use TailwindCSS to style the HTML shell and UI (score, buttons, game over screen).
+
+The main game should run on an HTML5 <canvas> with all animation logic in JavaScript.
+
+Use Tailwind for a responsive layout, centered canvas, and minimal UI around it.
+
+🧠 Bonus Features (optional but awesome):
+
+Add a glitch transition when the bird crashes.
+
+Animate a futuristic background (scrolling neon city skyline).
+
+Make the bird upgradeable with cyber enhancements (e.g., shields, double jump, laser burst).
+
+📁 Folder Structure:
+
+index.html
+
+style.css (TailwindCSS included)
+
+game.js
+
+Assets folder with sound effects and any optional graphics
+
+Code everything cleanly and modularly. Make sure it’s fun, addictive, and smooth on all screen sizes.
+
+
+🚀 UI/UX Design for Cybernetic Flappy Bird Clone
+🧬 Theme & Aesthetic
+Visual Style: Neon cyberpunk meets techno-apocalypse. Think Tron: Legacy mixed with Blade Runner.
+
+Color Palette:
+
+Background: Deep space black #000 with shifting gradients of dark purples and deep blues.
+
+Accents: Neon cyan #00FFFF, magenta #FF00FF, electric blue #00BFFF, bright lime #7CFC00, and laser red #FF3131.
+
+Typography: Sleek sci-fi font like 'Orbitron', 'Share Tech Mono', or similar monospace/futuristic font.
+
+Mood: Fast, intense, with lots of feedback—explosions, sound, and motion.
+
+🖼️ Layout
+Canvas Area (Gameplay):
+
+Fullscreen or centered responsive canvas.
+
+Dynamic city skyline scrolls in the background (optional parallax layers).
+
+Animated cybernetic bird drone flaps and leaves a glitchy trail.
+
+Top HUD (Heads-Up Display):
+
+Top center: Current Score in large, glowing neon text.
+
+Top-right: High Score with a subtle pulsating neon badge.
+
+Game Over Screen:
+
+Full-screen overlay with glassmorphism-style blur (backdrop-blur-sm) and glitch effects.
+
+Prominent "GAME OVER" headline with glitch animation.
+
+Score recap + high score.
+
+"Try Again" button styled like a glowing circuit panel (hover:scale-105, shadow-xl).
+
+Optional "Main Menu" and "Mute Sound" buttons below.
+
+🎮 User Interactions
+Flap Controls:
+
+Spacebar or mouse click/tap to flap.
+
+Responsive touch controls for mobile: tap anywhere on screen.
+
+Sound FX (optional toggle):
+
+Futuristic beeps for score, whooshes for flaps, heavy synth-booms for crashes.
+
+Toggle in top-left corner (🔊 / 🔇 icon with tailwind toggle animation).
+
+Hover States & Feedback:
+
+All UI buttons have glowing hover states (hover:shadow-neon, hover:text-cyan-400).
+
+Buttons pulse gently when idle (animate-pulse for heartbeat effect).
+
+Responsive Layout:
+
+Canvas resizes on all screen sizes using max-w-screen and aspect-ratio utilities.
+
+Mobile-first layout prioritizes vertical screen space.
+
+⚙️ TailwindCSS Notes
+Use custom Tailwind utilities for the theme:
+
+js
+Copy
+Edit
+// tailwind.config.js (extend colors & animations)
+extend: {
+  colors: {
+    neonBlue: '#00FFFF',
+    neonRed: '#FF3131',
+    cyberPurple: '#7D00FF',
+  },
+  animation: {
+    glitch: 'glitch 1s infinite',
+  },
+  keyframes: {
+    glitch: {
+      '0%, 100%': { transform: 'translate(0)' },
+      '20%': { transform: 'translate(-2px, 2px)' },
+      '40%': { transform: 'translate(2px, -2px)' },
+      '60%': { transform: 'translate(-1px, 1px)' },
+      '80%': { transform: 'translate(1px, -1px)' },
+    }
+  }
+}
+🧠 UX Design Philosophy
+Immersion First: Every interaction — from tapping to crashing — should feel powerful and cybernetic.
+
+Feedback Rich: Visual explosions, vibration-like screen shake, glitch flickers on crash.
+
+Minimal Distractions: Core gameplay stays front and center. All menus are sleek overlays with a seamless transition in/out.
+
+Replayability: High score tracking, instant retry button, and fast resets.

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Flappy UFO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neonBlue: '#00FFFF',
+                        neonRed: '#FF3131',
+                        cyberPurple: '#7D00FF',
+                        neonMagenta: '#FF00FF',
+                        electricBlue: '#00BFFF',
+                        neonLime: '#7CFC00'
+                    },
+                    animation: {
+                        glitch: 'glitch 1s infinite',
+                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        glitch: {
+                            '0%, 100%': { transform: 'translate(0)' },
+                            '20%': { transform: 'translate(-2px, 2px)' },
+                            '40%': { transform: 'translate(2px, -2px)' },
+                            '60%': { transform: 'translate(-1px, 1px)' },
+                            '80%': { transform: 'translate(1px, -1px)' }
+                        }
+                    },
+                    fontFamily: {
+                        cyber: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black font-cyber text-white overflow-hidden h-screen flex flex-col items-center justify-center">
+    <!-- Game Container -->
+    <div id="game-container" class="relative w-full max-w-3xl aspect-[9/16] md:aspect-[16/9]">
+        <!-- Sound Toggle -->
+        <button id="sound-toggle" class="absolute top-4 left-4 z-10 text-neonBlue hover:text-neonLime transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M9 18l3-3-3-3v6z" />
+            </svg>
+        </button>
+        
+        <!-- HUD -->
+        <div id="hud" class="absolute top-0 left-0 right-0 p-4 flex justify-between items-start z-10">
+            <div class="flex-1"></div> <!-- Spacer -->
+            <div id="score-display" class="text-4xl md:text-5xl text-center text-neonBlue animate-pulse">0</div>
+            <div id="high-score" class="flex-1 text-right text-neonMagenta text-sm md:text-base">
+                HI-SCORE: <span id="high-score-value">0</span>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="game-canvas" class="absolute inset-0 w-full h-full"></canvas>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-sm bg-black/50 z-20">
+            <h1 class="text-4xl md:text-6xl text-neonBlue mb-8 animate-glitch">CYBER UFO</h1>
+            <p class="text-neonLime mb-8">CLICK or PRESS SPACE to FLY</p>
+            <button id="start-button" class="bg-gradient-to-r from-neonBlue to-cyberPurple text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-neonBlue/50 hover:scale-105 transition-all">
+                START MISSION
+            </button>
+        </div>
+
+        <!-- Game Over Screen (hidden by default) -->
+        <div id="game-over" class="absolute inset-0 flex-col items-center justify-center backdrop-blur-sm bg-black/60 z-20 hidden">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl text-neonRed mb-4 animate-glitch">SYSTEM CRASH</h2>
+                <div class="mb-8">
+                    <p class="text-xl mb-2">SCORE: <span id="final-score" class="text-neonBlue">0</span></p>
+                    <p class="text-sm text-neonMagenta">HI-SCORE: <span id="final-high-score">0</span></p>
+                </div>
+                <button id="retry-button" class="bg-gradient-to-r from-neonRed to-neonMagenta text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-neonRed/50 hover:scale-105 transition-all">
+                    REBOOT SYSTEM
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
