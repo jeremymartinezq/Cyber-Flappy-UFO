@@ -1,6 +1,6 @@
 # Cyber Flappy UFO Game
 
-A futuristic, cyberpunk-themed Flappy UFO twist game built with HTML5 Canvas, TailwindCSS, and vanilla JavaScript.
+A futuristic, cyberpunk-themed Flappy UFO game built with HTML5 Canvas, TailwindCSS, and vanilla JavaScript.
 ![Screenshot 2025-05-01 231016](https://github.com/user-attachments/assets/4ecbaa65-60a7-4950-89da-9a13daa484b1)
 ![Screenshot 2025-05-01 231001](https://github.com/user-attachments/assets/9bb4f816-91be-448c-8b13-96072fbcc54c)
 ![Screenshot 2025-05-01 231051](https://github.com/user-attachments/assets/1349974d-3e59-460e-9d5e-f9c54923726f)
