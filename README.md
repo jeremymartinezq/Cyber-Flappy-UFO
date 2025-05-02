@@ -44,7 +44,7 @@ This game is built using:
 
 For full functionality, you'll need to add sound files to the `assets` folder:
 
-- `flap.mp3` - Sound when the bird flaps
+- `flap.mp3` - Sound when the UFO activates thrusters
 - `score.mp3` - Sound when passing through pipes
 - `crash.mp3` - Sound when crashing
 - `background.mp3` - Background music (optional)
@@ -55,4 +55,4 @@ This project is created for educational purposes.
 
 ## Author
 
-Created as a demonstration of HTML5 Canvas and JavaScript game development. 
+Created as a demonstration of HTML5 Canvas and JavaScript game development.
